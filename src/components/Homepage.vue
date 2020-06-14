@@ -4,7 +4,7 @@
 
     <!--    <div :style="bImg" class="parallax-image-home w3-display-container w3-opacity-min" id="home">-->
     <div class="parallax-image-home w3-display-container w3-opacity-min" id="home">
-      <!--         :style="{backgroundImage: `url(${background})`}" -->
+<!--      :style="{'backgroundImage': 'url(${publicPath}/assets/images/skyline/forest-mountains-fog-clouds-9754.jpg)'}"-->
       <div class="w3-display-middle" style="white-space:nowrap;">
         <span class="w3-center w3-padding-large w3-black text-extra-large w3-wide w3-animate-opacity">Welcome!</span>
       </div>
@@ -104,14 +104,14 @@
 //   name: 'App',
 //   components: { Home }
 // }
-// import background from '~/assets/images/skyline/forest-mountains-fog-clouds-9754.jpg'
+// import background from 'public/assets/images/skyline/forest-mountains-fog-clouds-9754.jpg'
 export default {
-  name: 'Homepage'
-  // data(){
-  //   return {
-  //     background
-  //   }
-  // }
+  name: 'Homepage',
+  data () {
+    return {
+      publicPath: process.env.BASE_URL
+    }
+  }
 }
 </script>
 
@@ -152,17 +152,16 @@ export default {
 
   .parallax-image-home{
     background-image: url("../../public/assets/images/skyline/forest-mountains-fog-clouds-9754.jpg");
-    /*background: url('./forest-mountains-fog-clouds-9754.jpg');*/
-    min-height: 100%;
-    min-width: 100%;
-    /*min-height: 400px;*/
+    height: 100vh;
+    width: 100vw;
   }
 
   .parallax-image-projects{
     background-image: url("../../public/assets/images/skyline/rocky-mountain-671658.jpg");
-    min-height: 100%;
-    max-width: 100%;
-    max-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    /*max-width: 100%;*/
+    /*max-height: 100vh;*/
     /*min-height: 400px;*/
   }
 </style>
