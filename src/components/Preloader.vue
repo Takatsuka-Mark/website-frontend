@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style scoped lang="less">
-  @import 'https://fonts.googleapis.com/css?family=Raleway';
+  /*@import 'https://fonts.googleapis.com/css?family=Raleway';*/
   @primary-color: #3498db;
 
   .preloader{
