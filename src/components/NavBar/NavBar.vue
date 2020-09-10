@@ -1,12 +1,19 @@
 <template>
   <nav :class="{sidebar: true}">
     <ul class="nav">
-      <h5 class="navTitle">TEMPLATE</h5>
+      <NavLink
+        :active-item="activeItem"
+        header="Landing Page"
+        link="/app/landing_page"
+        icon-name="flaticon-home"
+        index="landing_page"
+        is-header/>
+      <h5 class="navTitle">PAGES</h5>
       <nav-link
-        header="Typography"
-        link="/app/typography"
-        icon-name="flaticon-list"
-        index="typography"
+        header="Personal Stats"
+        link="/app/personal_stats"
+        icon-name="flaticon-server"
+        index="persona_stats"
         is-header/>
     </ul>
   </nav>

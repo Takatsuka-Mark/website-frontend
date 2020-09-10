@@ -19,6 +19,7 @@ export default {
     link: { type: String, default: '' },
     iconName: { type: String, default: '' },
     index: { type: String, default: '' },
+    className: { type: String, default: '' },
     activeItem: { type: String, default: '' },
     isHeader: { type: Boolean, default: false },
   },

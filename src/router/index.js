@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 // import Home from '../views/Home.vue';
 import Layout from '@/components/Layout/Layout.vue';
 import LandingPage from '@/pages/LandingPage/LandingPage.vue';
+import ErrorPage from '@/pages/Error/ErrorPage.vue';
+import PersonalStats from '@/pages/PersonalStats/PersonalStats.vue';
 
 Vue.use(VueRouter);
 
@@ -30,7 +32,17 @@ const routes = [
         name: 'LandingPage',
         component: LandingPage,
       },
+      {
+        path: 'personal_stats',
+        name: 'PersonalStats',
+        component: PersonalStats,
+      },
     ],
+  },
+  {
+    path: '*',
+    name: 'Error',
+    component: ErrorPage,
   },
 ];
 

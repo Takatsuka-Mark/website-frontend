@@ -1,0 +1,11 @@
+@import '../../../styles/app';
+
+.chart {
+  position: relative;
+  margin: (-$widget-padding-vertical) (-$widget-padding-horizontal) 0;
+  height: 400px;
+
+  @include media-breakpoint-down(sm){
+    height: 300px;
+  }
+}

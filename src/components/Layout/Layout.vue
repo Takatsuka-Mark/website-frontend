@@ -16,6 +16,8 @@ import { mapState, mapActions } from 'vuex';
 import NavBar from '@/components/NavBar/NavBar.vue';
 import Header from '@/components/Header/Header.vue';
 
+import './Layout.scss';
+
 export default {
   name: 'Layout',
   components: { NavBar, Header },
