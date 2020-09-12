@@ -22,13 +22,20 @@ export default {
       // TODO Actually set these values
       // Base
       // General subject breakdown
-      { from: 'All', to: 'CS', value: 10 },
-      { from: 'All', to: 'Math', value: 10 },
-      { from: 'All', to: 'Other Science', value: 4 },
-      { from: 'All', to: 'Humanities', value: 4 },
+      {
+        from: 'Source', to: 'All Classes', value: 28, labelText: 'All<br> College Classes', labelLocation: 0,
+      },
+      {
+        from: 'All Classes', to: 'CS', value: 10,
+      },
+      { from: 'All Classes', to: 'Math', value: 10 },
+      { from: 'All Classes', to: 'Other Science', value: 4 },
+      { from: 'All Classes', to: 'Humanities', value: 4 },
 
       // CS Class Breakdown
-      { from: 'CS', to: 'A', value: 8 },
+      {
+        from: 'CS', to: 'A', value: 8, labelText: 'All College Classes',
+      },
       { from: 'CS', to: 'A-', value: 1 },
       { from: 'CS', to: 'B', value: 1 },
 
@@ -82,6 +89,15 @@ export default {
     chart.dataFields.fromName = 'from';
     chart.dataFields.toName = 'to';
     chart.dataFields.value = 'value';
+
+    chart.nodes.template.nameLabel.disabled = true;
+    const labelBullet = chart.links.template.bullets.push(new am4charts.LabelBullet());
+    labelBullet.label.propertyFields.text = 'labelText';
+    labelBullet.propertyFields.locationX = 'labelLocation';
+    labelBullet.propertyFields.rotation = 'labelRotation';
+    labelBullet.label.horizontalCenter = 'left';
+    labelBullet.label.textAlign = 'start';
+    labelBullet.label.dx = -50;
   },
 };
 </script>

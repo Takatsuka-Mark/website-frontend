@@ -17,6 +17,7 @@ export default {
     chart.curveContainer.padding(20, 20, 20, 20);
     chart.levelCount = 8;
     chart.orientation = 'horizontal';
+    chart.fontSize = 11;
 
     const colorSet = new am4core.ColorSet();
     colorSet.saturation = 0.6;
@@ -27,12 +28,20 @@ export default {
       end: '2022-05-05', // TODO actrually may?
       color: colorSet.getIndex(0),
       task: 'Rochester Institute of Technology (RIT)',
+    },
+    {
+      category: 'Jobs',
+      start: '2020-05-14',
+      end: '2020-12-18',
+      color: colorSet.getIndex(0),
+      task: 'BlocWatch - SecureCloudDB',
     }];
 
     chart.dateFormatter.dateFormat = 'yyyy-MM-dd';
     chart.dateFormatter.inputDateFormat = 'yyyy-MM-dd';
 
     const categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+    categoryAxis.dataFields.category = 'category';
     categoryAxis.renderer.grid.template.disabled = true;
     categoryAxis.renderer.labels.template.paddingRight = 25;
     categoryAxis.renderer.minGridDistance = 10;
@@ -61,7 +70,8 @@ export default {
 
     const categoryAxisLabelTemplate = categoryAxis.renderer.labels.template;
     categoryAxisLabelTemplate.horizontalCenter = 'left';
-    categoryAxisLabelTemplate.adapter.add('rotation', () => {
+    // eslint-disable-next-line no-unused-vars
+    categoryAxisLabelTemplate.adapter.add('rotation', (rotation, target) => {
       const position = dateAxis.valueToPosition(dateAxis.min);
       return dateAxis.renderer.positionToAngle(position) + 90;
     });
@@ -76,6 +86,35 @@ export default {
     series1.columns.template.propertyFields.fill = 'color'; // get color from data
     series1.columns.template.propertyFields.stroke = 'color';
     series1.columns.template.strokeOpacity = 0;
+
+    const bullet = new am4charts.CircleBullet();
+    series1.bullets.push(bullet);
+    bullet.circle.radius = 3;
+    bullet.circle.strokeOpacity = 0;
+    bullet.propertyFields.fill = 'color';
+    bullet.locationX = 0;
+
+    const bullet2 = new am4charts.CircleBullet();
+    series1.bullets.push(bullet2);
+    bullet2.circle.radius = 3;
+    bullet2.circle.strokeOpacity = 0;
+    bullet2.propertyFields.fill = 'color';
+    bullet2.locationX = 1;
+
+    chart.scrollbarX = new am4core.Scrollbar();
+    chart.scrollbarX.align = 'center';
+    chart.scrollbarX.width = am4core.percent(90);
+
+    const cursor = new am4timeline.CurveCursor();
+    chart.cursor = cursor;
+    cursor.xAxis = dateAxis;
+    cursor.yAxis = categoryAxis;
+    cursor.lineY.disabled = true;
+    cursor.lineX.strokeDasharray = '1,4';
+    cursor.lineX.strokeOpacity = 1;
+
+    dateAxis.renderer.tooltipLocation2 = 0;
+    categoryAxis.cursorTooltipEnabled = false;
   },
 };
 </script>
