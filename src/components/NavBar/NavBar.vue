@@ -1,26 +1,26 @@
 <template>
   <nav :class="{sidebar: true}">
     <ul class="nav">
-      <NavLink
-        :active-item="activeItem"
-        header="Landing Page"
-        link="/app/landing_page"
-        icon-name="flaticon-home"
-        index="landing_page"
-        is-header/>
-      <h5 class="navTitle">PAGES</h5>
-      <nav-link
-        header="Personal Stats"
-        link="/app/personal_stats"
-        icon-name="flaticon-server"
-        index="persona_stats"
-        is-header/>
       <nav-link
         header="About Me"
         link="/app/about_me"
-        icon-name="flaticon-server"
+        icon-name="flaticon-user-3"
         index="about_me"
         is-header/>
+<!--      <h5 class="navTitle">PAGES</h5>-->
+<!--      <nav-link-->
+<!--        header="Personal Stats"-->
+<!--        link="/app/personal_stats"-->
+<!--        icon-name="flaticon-percent-1"-->
+<!--        index="persona_stats"-->
+<!--        is-header/>-->
+<!--      <NavLink-->
+<!--        :active-item="activeItem"-->
+<!--        header="Landing Page"-->
+<!--        link="/app/landing_page"-->
+<!--        icon-name="flaticon-home"-->
+<!--        index="landing_page"-->
+<!--        is-header/>-->
     </ul>
   </nav>
 </template>

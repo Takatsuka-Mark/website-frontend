@@ -9,7 +9,7 @@ export default {
     const currentPath = this.$router.history.current.path;
 
     if (currentPath === '/' || currentPath === '/app') {
-      this.$router.push('/app/landing_page');
+      this.$router.push('/app/about_me');
     }
   },
 };
