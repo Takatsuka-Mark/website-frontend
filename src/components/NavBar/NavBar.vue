@@ -1,5 +1,9 @@
 <template>
+  <b-collapse class="sidebar-collapse" id="sidebar-collapse" :visible="sidebarOpened">
   <nav :class="{sidebar: true}">
+    <header class="logo">
+      <router-link to="/app/about_me">Mark <span class="fw-semi-bold">Takatsuka</span></router-link>
+    </header>
     <ul class="nav">
       <nav-link
         header="About Me"
@@ -23,6 +27,7 @@
 <!--        is-header/>-->
     </ul>
   </nav>
+  </b-collapse>
 </template>
 
 <script>

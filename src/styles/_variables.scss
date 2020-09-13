@@ -88,6 +88,8 @@ $font-weight-base: $font-weight-thin !default;
 $addition-bg: rgba($white, .1) !default;
 
 $body-bg: $violet !default;
+//$body-bg-gradient-start: $teal;
+//$body-bg-gradient-end: $green;
 $body-bg-gradient-start: $violet;
 $body-bg-gradient-end: #17193B;
 $body-bg-light: lighten($body-bg, 3%);
