@@ -15,6 +15,12 @@
         icon-name="flaticon-server"
         index="persona_stats"
         is-header/>
+      <nav-link
+        header="About Me"
+        link="/app/about_me"
+        icon-name="flaticon-server"
+        index="about_me"
+        is-header/>
     </ul>
   </nav>
 </template>

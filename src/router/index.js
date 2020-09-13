@@ -5,23 +5,11 @@ import Layout from '@/components/Layout/Layout.vue';
 import LandingPage from '@/pages/LandingPage/LandingPage.vue';
 import ErrorPage from '@/pages/Error/ErrorPage.vue';
 import PersonalStats from '@/pages/PersonalStats/PersonalStats.vue';
+import AboutMe from '@/pages/AboutMe/AboutMe.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: Home,
-  // },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
-  // },
   {
     path: '/app',
     name: 'Layout',
@@ -36,6 +24,11 @@ const routes = [
         path: 'personal_stats',
         name: 'PersonalStats',
         component: PersonalStats,
+      },
+      {
+        path: 'about_me',
+        name: 'AboutMe',
+        component: AboutMe,
       },
     ],
   },
