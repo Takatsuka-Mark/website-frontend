@@ -5,7 +5,8 @@ import Layout from '@/components/Layout/Layout.vue';
 // import LandingPage from '@/pages/LandingPage/LandingPage.vue';
 import ErrorPage from '@/pages/Error/ErrorPage.vue';
 // import PersonalStats from '@/pages/PersonalStats/PersonalStats.vue';
-import AboutMe from '@/pages/AboutMe/AboutMe.vue';
+import Resume from '@/pages/AboutMe/Resume/Resume.vue';
+import Construction from '@/pages/Construction/Construction.vue';
 
 Vue.use(VueRouter);
 
@@ -26,9 +27,14 @@ const routes = [
       //   component: PersonalStats,
       // },
       {
-        path: 'about_me',
-        name: 'AboutMe',
-        component: AboutMe,
+        path: 'resume',
+        name: 'Resume',
+        component: Resume,
+      },
+      {
+        path: 'construction',
+        name: 'Construction',
+        component: Construction,
       },
     ],
   },

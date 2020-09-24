@@ -4,27 +4,76 @@
     <header class="logo">
       <router-link to="/app/about_me">Mark <span class="fw-semi-bold">Takatsuka</span></router-link>
     </header>
+<!--    <h5 class="navTitle">NAVIGATION</h5>-->
     <ul class="nav">
+      <h5 class="navTitle">ABOUT ME</h5>
       <nav-link
-        header="About Me"
-        link="/app/about_me"
+        header="Resume"
+        link="/app/resume"
         icon-name="flaticon-user-3"
         index="about_me"
         is-header/>
-<!--      <h5 class="navTitle">PAGES</h5>-->
-<!--      <nav-link-->
-<!--        header="Personal Stats"-->
-<!--        link="/app/personal_stats"-->
-<!--        icon-name="flaticon-percent-1"-->
-<!--        index="persona_stats"-->
-<!--        is-header/>-->
-<!--      <NavLink-->
-<!--        :active-item="activeItem"-->
-<!--        header="Landing Page"-->
-<!--        link="/app/landing_page"-->
-<!--        icon-name="flaticon-home"-->
-<!--        index="landing_page"-->
-<!--        is-header/>-->
+      <nav-link
+        header="Overview"
+        link="/app/construction"
+        icon-name="flaticon-warning"
+        index="about_me"
+        is-header/>
+      <nav-link
+        header="Employment"
+        link="/app/construction"
+        icon-name="flaticon-warning"
+        index="about_me"
+        is-header/>
+      <nav-link
+        header="Education"
+        link="/app/construction"
+        icon-name="flaticon-warning"
+        index="about_me"
+        is-header/>
+      <nav-link
+        header="Projects"
+        link="/app/construction"
+        icon-name="flaticon-warning"
+        index="about_me"
+        is-header/>
+      <nav-link
+        header="Awards"
+        link="/app/construction"
+        icon-name="flaticon-warning"
+        index="about_me"
+        is-header/>
+      <nav-link
+        header="Extra-Curriculars"
+        link="/app/construction"
+        icon-name="flaticon-warning"
+        index="about_me"
+        is-header/>
+      <h5 class="navTitle">PROJECTS</h5>
+      <nav-link
+        header="Interpreter"
+        link="/app/construction"
+        icon-name="flaticon-warning"
+        index="about_me"
+        is-header/>
+      <nav-link
+        header="Cluster Computing"
+        link="/app/construction"
+        icon-name="flaticon-warning"
+        index="about_me"
+        is-header/>
+      <nav-link
+        header="HikeLine"
+        link="/app/construction"
+        icon-name="flaticon-warning"
+        index="about_me"
+        is-header/>
+      <nav-link
+        header="Swarming"
+        link="/app/construction"
+        icon-name="flaticon-warning"
+        index="about_me"
+        is-header/>
     </ul>
   </nav>
   </b-collapse>
