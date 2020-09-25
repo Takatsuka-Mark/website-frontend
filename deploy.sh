@@ -14,6 +14,6 @@ echo 'www.marktakatsuka.com' > CNAME
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:Takatsuka-Mark/website-frontend.git master
+git push -f git@github.com:Takatsuka-Mark/website-frontend.git master:gh-pages
 
 cd -
