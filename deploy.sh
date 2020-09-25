@@ -17,3 +17,10 @@ git commit -m 'deploy'
 git push -f git@github.com:Takatsuka-Mark/website-frontend.git master:gh-pages
 
 cd -
+
+function pause(){
+ read -s -n 1 -p "Press any key to continue . . ."
+ echo ""
+}
+
+pause
