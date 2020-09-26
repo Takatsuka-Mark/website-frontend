@@ -10,7 +10,7 @@
     <b-row>
       <b-col>
       <Widget>
-        <pdf v-on:click="print()" :src="image" style="display: inline-block; width: 100%"></pdf>
+        <pdf :src="image" style="display: inline-block; width: 100%"></pdf>
       </Widget>
       </b-col>
     </b-row>

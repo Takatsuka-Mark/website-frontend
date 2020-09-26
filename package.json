@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "takatsuka",
   "version": "0.1.0",
   "private": true,
   "author": "Mark Takatsuka",
@@ -15,6 +15,7 @@
     "animate.css": "^4.1.1",
     "bootstrap-scss": "^4.5.2",
     "bootstrap-vue": "^2.16.0",
+    "connect-history-api-fallback": "^1.6.0",
     "core-js": "^3.6.5",
     "express": "^4.17.1",
     "font-awesome": "^4.7.0",
@@ -63,6 +64,6 @@
     "not dead"
   ],
   "engines": {
-    "node": "12.16.1"
+    "node": "12.x.x"
   }
 }
