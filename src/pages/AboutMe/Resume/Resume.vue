@@ -25,6 +25,7 @@ const loadingTask = pdf.createLoadingTask('Takatsuka_Resume.pdf');
 
 export default {
   name: 'resume',
+  title: 'Mark Takatsuka - Resume',
   components: {
     Widget,
     pdf,
