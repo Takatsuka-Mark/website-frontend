@@ -29,7 +29,7 @@
         :active-item="activeItem"
         header="Education"
         link="/app/education"
-        icon-name="flaticon-network"
+        icon-name="flaticon-bookmark"
         index="education"
         :children-links="[
         {header: 'Education', link: '/app/education'},
