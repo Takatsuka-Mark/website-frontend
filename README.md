@@ -1,4 +1,9 @@
-# frontend
+# Website Frontend
+Hosted at [MarkTakatsuka.com](https://www.marktakatsuka.com)
+
+### Deployment Steps
+1. `npm run build`
+1. `gcloud app deploy`
 
 ## Project setup
 ```
@@ -19,6 +24,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
