@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
 import VueAnalytics from 'vue-analytics';
+import titleMixin from '@/mixins/titleMixin';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -14,6 +15,7 @@ Vue.use(VueAnalytics, {
 });
 Vue.config.productionTip = false;
 Vue.mixin(layoutMixin);
+Vue.mixin(titleMixin);
 
 new Vue({
   router,

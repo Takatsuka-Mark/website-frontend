@@ -18,6 +18,7 @@ import errorImg from '@/assets/error.png';
 
 export default {
   name: 'Construction',
+  title: 'Mark Takatsuka - Construction',
   data() {
     return {
       errorImg,
