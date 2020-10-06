@@ -12,7 +12,7 @@ import * as am4timeline from '@amcharts/amcharts4/plugins/timeline';
 import * as am4bullets from '@amcharts/amcharts4/plugins/bullets';
 
 export default {
-  name: 'EducationTimeline',
+  name: 'AboutMeTimeline',
   mounted() {
     const chart = am4core.create(this.$refs.chart, am4timeline.SerpentineChart);
     chart.curveContainer.padding(50, 20, 50, 20);
@@ -25,41 +25,29 @@ export default {
     colorSet.saturation = 0.5;
 
     chart.data = [{
-      category: 'Module #1',
-      start: '2019-01-10',
-      end: '2019-01-13',
+      category: 'Education',
+      start: '2016-09',
+      end: '2018-06',
       color: colorSet.getIndex(0),
-      task: 'Gathering requirements',
+      task: 'EDCC',
     }, {
-      category: 'Module #1',
-      start: '2019-02-05',
-      end: '2019-04-18',
+      category: 'Education',
+      start: '2018-08',
+      end: '2019-08',
       color: colorSet.getIndex(0),
-      task: 'Development',
+      task: 'RIT - (B.S. Computer Security)',
     }, {
-      category: 'Module #2',
-      start: '2019-01-08',
-      end: '2019-01-10',
-      color: colorSet.getIndex(5),
-      task: 'Gathering requirements',
+      category: 'Education',
+      start: '2019-08',
+      end: '2022-05',
+      color: colorSet.getIndex(0),
+      task: 'RIT - (B.S. Computer Science)',
     }, {
-      category: 'Module #2',
-      start: '2019-01-12',
-      end: '2019-01-15',
+      category: 'Extracurriculars',
+      start: '2014-09',
+      end: '2018-08',
       color: colorSet.getIndex(5),
-      task: 'Producing specifications',
-    }, {
-      category: 'Module #2',
-      start: '2019-01-16',
-      end: '2019-02-05',
-      color: colorSet.getIndex(5),
-      task: 'Development',
-    }, {
-      category: 'Module #2',
-      start: '2019-02-10',
-      end: '2019-02-18',
-      color: colorSet.getIndex(5),
-      task: 'Testing and QA',
+      task: 'FRC Member',
     }, {
       category: '',
     }, {
@@ -68,18 +56,6 @@ export default {
       end: '2019-01-19',
       color: colorSet.getIndex(9),
       task: 'Gathering requirements',
-    }, {
-      category: 'Module #3',
-      start: '2019-02-01',
-      end: '2019-02-10',
-      color: colorSet.getIndex(9),
-      task: 'Producing specifications',
-    }, {
-      category: 'Module #3',
-      start: '2019-03-10',
-      end: '2019-04-15',
-      color: colorSet.getIndex(9),
-      task: 'Development',
     }, {
       category: 'Module #3',
       start: '2019-04-20',
@@ -97,18 +73,6 @@ export default {
       task: 'Gathering requirements',
       disabled1: false,
       image1: '/wp-content/uploads/assets/timeline/monica.jpg',
-    }, {
-      category: 'Module #4',
-      start: '2019-02-25',
-      end: '2019-03-10',
-      color: colorSet.getIndex(15),
-      task: 'Development',
-    }, {
-      category: 'Module #4',
-      start: '2019-03-23',
-      end: '2019-04-29',
-      color: colorSet.getIndex(15),
-      task: 'Testing and QA',
     }];
 
     chart.dateFormatter.dateFormat = 'yyyy-MM-dd';
@@ -125,7 +89,10 @@ export default {
 
     const dateAxis = chart.xAxes.push(new am4charts.DateAxis());
     dateAxis.renderer.minGridDistance = 70;
-    dateAxis.baseInterval = { count: 1, timeUnit: 'day' };
+    dateAxis.baseInterval = {
+      count: 1,
+      timeUnit: 'day',
+    };
     dateAxis.renderer.tooltipLocation = 0;
     dateAxis.startLocation = -0.5;
     dateAxis.renderer.line.strokeDasharray = '1,4';
@@ -139,7 +106,7 @@ export default {
     labelTemplate.verticalCenter = 'middle';
     labelTemplate.fillOpacity = 0.7;
     labelTemplate.background.fill = new am4core.InterfaceColorSet().getFor('background');
-    labelTemplate.background.fillOpacity = 1;
+    labelTemplate.background.fillOpacity = 0.2;
     labelTemplate.padding(7, 7, 7, 7);
 
     const series = chart.series.push(new am4timeline.CurveColumnSeries());
@@ -153,32 +120,59 @@ export default {
     series.columns.template.propertyFields.stroke = 'color';
     series.columns.template.strokeOpacity = 0;
 
+    const bullet = series.bullets.push(new am4charts.CircleBullet());
+    bullet.circle.radius = 3;
+    bullet.circle.strokeOpacity = 0;
+    bullet.propertyFields.fill = 'color';
+    bullet.locationX = 0;
+
+    const bullet2 = series.bullets.push(new am4charts.CircleBullet());
+    bullet2.circle.radius = 3;
+    bullet2.circle.strokeOpacity = 0;
+    bullet2.propertyFields.fill = 'color';
+    bullet2.locationX = 1;
+
     const eventSeries = chart.series.push(new am4timeline.CurveLineSeries());
     eventSeries.dataFields.dateX = 'eventDate';
     eventSeries.dataFields.categoryY = 'category';
+    // eventSeries.data = [
+    //   {
+    //     category: '', eventDate: '2019-01-15',
+    //     letter: 'A', description: 'Something happened here',
+    //   },
+    //   {
+    //     category: '', eventDate: '2019-01-23',
+    //     letter: 'B', description: 'Something happened here',
+    //   },
+    //   {
+    //     category: '', eventDate: '2019-02-10',
+    //     letter: 'C', description: 'Something happened here',
+    //   },
+    //   {
+    //     category: '', eventDate: '2019-02-29',
+    //     letter: 'D', description: 'Something happened here',
+    //   },
+    //   {
+    //     category: '', eventDate: '2019-03-06',
+    //     letter: 'E', description: 'Something happened here',
+    //   },
+    //   {
+    //     category: '', eventDate: '2019-03-12',
+    //     letter: 'F', description: 'Something happened here',
+    //   },
+    //   {
+    //     category: '', eventDate: '2019-03-22',
+    //     letter: 'G', description: 'Something happened here',
+    //   }];
     eventSeries.data = [
       {
-        category: '', eventDate: '2019-01-15', letter: 'A', description: 'Something happened here',
+        category: 'Education',
+        eventDate: '2019-08',
+        letter: '!',
+        description: 'Changed Majors from Computer Security to Computer Science',
       },
-      {
-        category: '', eventDate: '2019-01-23', letter: 'B', description: 'Something happened here',
-      },
-      {
-        category: '', eventDate: '2019-02-10', letter: 'C', description: 'Something happened here',
-      },
-      {
-        category: '', eventDate: '2019-02-29', letter: 'D', description: 'Something happened here',
-      },
-      {
-        category: '', eventDate: '2019-03-06', letter: 'E', description: 'Something happened here',
-      },
-      {
-        category: '', eventDate: '2019-03-12', letter: 'F', description: 'Something happened here',
-      },
-      {
-        category: '', eventDate: '2019-03-22', letter: 'G', description: 'Something happened here',
-      }];
-    eventSeries.strokeOpacity = 0;
+    ];
+    eventSeries.strokeOpacity = 0.5;
 
     const flagBullet = eventSeries.bullets.push(new am4bullets.FlagBullet());
     flagBullet.label.propertyFields.text = 'letter';

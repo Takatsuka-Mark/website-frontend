@@ -15,8 +15,8 @@
         is-header/>
       <nav-link
         header="Overview"
-        link="/app/construction"
-        icon-name="flaticon-warning"
+        link="/app/overview"
+        icon-name="flaticon-user-3"
         index="overview"
         is-header/>
       <nav-link
@@ -25,15 +25,15 @@
         icon-name="flaticon-warning"
         index="employment"
         is-header/>
-      <nav-link
-        :active-item="activeItem"
-        header="Education"
-        link="/app/education"
-        icon-name="flaticon-bookmark"
-        index="education"
-        :children-links="[
-        {header: 'Education', link: '/app/education'},
-        {header: 'Extracurriculars', link: '/app/construction'},]"/>
+<!--      <nav-link-->
+<!--        :active-item="activeItem"-->
+<!--        header="Education"-->
+<!--        link="/app/education"-->
+<!--        icon-name="flaticon-bookmark"-->
+<!--        index="education"-->
+<!--        :children-links="[-->
+<!--        {header: 'Education', link: '/app/construction'},-->
+<!--        {header: 'Extracurriculars', link: '/app/construction'},]"/>-->
       <nav-link
         header="Projects"
         link="/app/construction"

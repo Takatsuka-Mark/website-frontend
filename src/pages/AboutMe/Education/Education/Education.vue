@@ -11,19 +11,15 @@
 <!--      <b-col lg="7">-->
       <b-col>
         <Widget title="<h5>Timeline</h5>" custom-header>
-          <EducationTimeline/>
+          <AboutMeTimeline/>
         </Widget>
         <Widget title="<h5>Mountlake Terrace High School</h5>" custom-header>
-
         </Widget>
         <Widget title="<h5>Edmonds Community College</h5>" custom-header>
-
         </Widget>
         <Widget title="<h5>Rochester Institute of Technology</h5>" custom-header>
-
         </Widget>
         <Widget title="<h5>Graduate School?</h5>" custom-header>
-
         </Widget>
       </b-col>
     </b-row>
@@ -32,12 +28,13 @@
 
 <script>
 import Widget from '@/components/Widget/Widget.vue';
-import EducationTimeline from '@/components/Charts/Timeline/EducationTimeline/EducationTimeline.vue';
+// import EducationTimeline from '@/components/Charts/Timeline/AboutMeTimeline/AboutMeTimeline.vue';
+import AboutMeTimeline from '@/components/Charts/Timeline/AboutMeTimeline/AboutMeTimeline.vue';
 
 export default {
   name: 'Education',
   title: 'Mark Takatsuka - Education',
-  components: { EducationTimeline, Widget },
+  components: { AboutMeTimeline, Widget },
 };
 </script>
 
