@@ -5,7 +5,7 @@
       <b-breadcrumb-item active>Resume</b-breadcrumb-item>
     </b-breadcrumb>
     <h1 class="page-title">
-      Resume - <span class="fw-semi-bold">A Quick Overview</span>
+      Resume - <span class="fw-semi-bold">(=^.^=)</span>
     </h1>
     <b-row>
       <b-col>
