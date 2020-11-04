@@ -8,16 +8,16 @@
     <ul class="nav">
       <h5 class="navTitle">ABOUT ME</h5>
       <nav-link
-        header="Resume"
-        link="/app/resume"
-        icon-name="flaticon-user-3"
-        index="about_me"
-        is-header/>
-      <nav-link
         header="Overview"
         link="/app/overview"
         icon-name="flaticon-user-3"
         index="overview"
+        is-header/>
+      <nav-link
+        header="Resume"
+        link="/app/resume"
+        icon-name="flaticon-user-3"
+        index="about_me"
         is-header/>
       <nav-link
         header="Employment"

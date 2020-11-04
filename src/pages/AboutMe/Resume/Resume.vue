@@ -10,7 +10,7 @@
     <b-row>
       <b-col>
       <Widget>
-        <pdf :src="image" style="display: inline-block; width: 100%"></pdf>
+        <pdf src='Takatsuka_Resume.pdf' style="display: inline-block; width: 100%"></pdf>
       </Widget>
       </b-col>
     </b-row>
@@ -21,8 +21,6 @@
 import Widget from '@/components/Widget/Widget.vue';
 import pdf from 'vue-pdf';
 
-const loadingTask = pdf.createLoadingTask('Takatsuka_Resume.pdf');
-
 export default {
   name: 'resume',
   title: 'Mark Takatsuka - Resume',
@@ -32,7 +30,7 @@ export default {
   },
   data() {
     return {
-      image: loadingTask,
+      // image: loadingTask,
     };
   },
 };
