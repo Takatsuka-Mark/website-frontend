@@ -8,71 +8,68 @@
     <ul class="nav">
       <h5 class="navTitle">ABOUT ME</h5>
       <nav-link
+        header="Overview"
+        link="/app/overview"
+        icon-name="flaticon-user-3"
+        index="overview"
+        is-header/>
+      <nav-link
         header="Resume"
         link="/app/resume"
         icon-name="flaticon-user-3"
         index="about_me"
         is-header/>
       <nav-link
-        header="Overview"
-        link="/app/construction"
-        icon-name="flaticon-warning"
-        index="about_me"
-        is-header/>
-      <nav-link
         header="Employment"
         link="/app/construction"
         icon-name="flaticon-warning"
-        index="about_me"
+        index="employment"
         is-header/>
-      <nav-link
-        header="Education"
-        link="/app/construction"
-        icon-name="flaticon-warning"
-        index="about_me"
-        is-header/>
+<!--      <nav-link-->
+<!--        :active-item="activeItem"-->
+<!--        header="Education"-->
+<!--        link="/app/education"-->
+<!--        icon-name="flaticon-bookmark"-->
+<!--        index="education"-->
+<!--        :children-links="[-->
+<!--        {header: 'Education', link: '/app/construction'},-->
+<!--        {header: 'Extracurriculars', link: '/app/construction'},]"/>-->
       <nav-link
         header="Projects"
         link="/app/construction"
         icon-name="flaticon-warning"
-        index="about_me"
+        index="projects"
         is-header/>
       <nav-link
         header="Awards"
         link="/app/construction"
         icon-name="flaticon-warning"
-        index="about_me"
-        is-header/>
-      <nav-link
-        header="Extra-Curriculars"
-        link="/app/construction"
-        icon-name="flaticon-warning"
-        index="about_me"
+        index="awards"
         is-header/>
       <h5 class="navTitle">PROJECTS</h5>
       <nav-link
         header="Interpreter"
         link="/app/construction"
         icon-name="flaticon-warning"
-        index="about_me"
+        index="projects"
         is-header/>
       <nav-link
         header="Cluster Computing"
         link="/app/construction"
         icon-name="flaticon-warning"
-        index="about_me"
+        index="projects"
         is-header/>
       <nav-link
         header="HikeLine"
         link="/app/construction"
         icon-name="flaticon-warning"
-        index="about_me"
+        index="projects"
         is-header/>
       <nav-link
         header="Swarming"
         link="/app/construction"
         icon-name="flaticon-warning"
-        index="about_me"
+        index="projects"
         is-header/>
     </ul>
   </nav>
