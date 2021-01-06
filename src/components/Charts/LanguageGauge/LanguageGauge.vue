@@ -44,7 +44,7 @@ export default {
     }];
 
     chart.startAngle = -90;
-    chart.endAngle = 225;
+    chart.endAngle = 200;
     chart.innerRadius = am4core.percent(20);
 
     chart.colors.list = [

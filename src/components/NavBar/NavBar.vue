@@ -35,12 +35,6 @@
 <!--        {header: 'Education', link: '/app/construction'},-->
 <!--        {header: 'Extracurriculars', link: '/app/construction'},]"/>-->
       <nav-link
-        header="Projects"
-        link="/app/construction"
-        icon-name="flaticon-warning"
-        index="projects"
-        is-header/>
-      <nav-link
         header="Awards"
         link="/app/construction"
         icon-name="flaticon-warning"
@@ -49,26 +43,8 @@
       <h5 class="navTitle">PROJECTS</h5>
       <nav-link
         header="Interpreter"
-        link="/app/construction"
-        icon-name="flaticon-warning"
-        index="projects"
-        is-header/>
-      <nav-link
-        header="Cluster Computing"
-        link="/app/construction"
-        icon-name="flaticon-warning"
-        index="projects"
-        is-header/>
-      <nav-link
-        header="HikeLine"
-        link="/app/construction"
-        icon-name="flaticon-warning"
-        index="projects"
-        is-header/>
-      <nav-link
-        header="Swarming"
-        link="/app/construction"
-        icon-name="flaticon-warning"
+        link="/app/math"
+        icon-name="flaticon-calculator"
         index="projects"
         is-header/>
     </ul>
