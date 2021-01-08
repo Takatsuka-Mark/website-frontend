@@ -74,8 +74,10 @@ $theme-colors: (
 
 $link-color: $blue;
 
-$header-color: rgba(#F4F4F5, .9) !default;
-$text-color: rgba(#F4F4F5, .6) !default;
+//$header-color: rgba(#F4F4F5, .9) !default;
+//$text-color: rgba(#F4F4F5, .6) !default;
+$header-color: rgba(#3b3d3d, .9) !default;
+$text-color: rgba(#3b3d3d, .6) !default;
 $body-color: $text-color;
 $border-color: $dark !default;
 $text-muted: rgba($text-color, .7) !default;
@@ -84,7 +86,7 @@ $font-weight-bold: 700 !default;
 $font-weight-semi-bold: 600 !default;
 $font-weight-normal: 400 !default;
 $font-weight-thin: 300 !default;
-$font-weight-base: $font-weight-thin !default;
+$font-weight-base: $font-weight-normal !default;
 
 $addition-bg: rgba($white, .1) !default;
 
@@ -93,8 +95,10 @@ $body-bg: $violet !default;
 //$body-bg-gradient-end: $green;
 //$body-bg-gradient-start: $violet;
 //$body-bg-gradient-end: #17193B;
-$body-bg-gradient-end: $cyan;
-$body-bg-gradient-start: $blue;
+$body-bg-gradient-start: #ffffff;
+$body-bg-gradient-end: #b5b8bd;// #f6f8fa;
+//$body-bg-gradient-end: $cyan;
+//$body-bg-gradient-start: $blue;
 $body-bg-light: lighten($body-bg, 3%);
 $default-bg: radial-gradient(farthest-side ellipse at 10% 0, $body-bg-gradient-start, $body-bg-gradient-end);
 
@@ -181,7 +185,7 @@ $nav-pills-link-active-bg: $widget-bg;
 //== Forms
 //
 $input-focus-border-color: #4d90fe !default; //webkit focus color
-$input-bg: $dark !default;
+//$input-bg: $dark !default;
 $input-border-width: 0 !default;
 $input-group-addon-bg: $default !default;
 
