@@ -2,7 +2,7 @@
   <b-collapse class="sidebar-collapse" id="sidebar-collapse" :visible="sidebarOpened">
   <nav :class="{sidebar: true}">
     <header class="logo">
-      <router-link to="/app/about_me">Mark <span class="fw-semi-bold">Takatsuka</span></router-link>
+      <router-link to="/app/overview">Mark <span class="fw-semi-bold">Takatsuka</span></router-link>
     </header>
 <!--    <h5 class="navTitle">NAVIGATION</h5>-->
     <ul class="nav">

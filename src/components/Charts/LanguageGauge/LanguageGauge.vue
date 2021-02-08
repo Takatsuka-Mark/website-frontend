@@ -20,26 +20,31 @@ export default {
     //    Python start = 09/2017
     //    Go Start = 10/2019
     //    VueJS Start = 03/2020
+    const vueStart = new Date(2020, 3, 1, 0, 0, 0);
+    const goStart = new Date(2019, 10, 1, 0, 0, 0);
+    const pythonStart = new Date(2017, 9, 1, 0, 0, 0);
+    const cStart = new Date(2016, 9, 1, 0, 0, 0);
+    const javaStart = new Date(2014, 9, 1, 0, 0, 0);
     // Times calculated from: 11/2020
     chart.data = [{
       category: 'Vue JS',
-      value: 8,
+      value: this.getMonthsSince(vueStart),
       full: 4,
     }, {
       category: 'Go',
-      value: 13,
+      value: this.getMonthsSince(goStart),
       full: 4,
     }, {
       category: 'Python',
-      value: 38,
+      value: this.getMonthsSince(pythonStart),
       full: 4,
     }, {
       category: 'C / C++ / C#',
-      value: 50,
+      value: this.getMonthsSince(cStart),
       full: 4,
     }, {
       category: 'Java',
-      value: 74,
+      value: this.getMonthsSince(javaStart),
       full: 4,
     }];
 
@@ -69,7 +74,7 @@ export default {
     const valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.grid.template.strokeOpacity = 0;
     valueAxis.min = 0;
-    valueAxis.max = 74;
+    valueAxis.max = this.getMonthsSince(javaStart);
     valueAxis.strictMinMax = true;
 
     // Create series
@@ -95,6 +100,15 @@ export default {
 
     // Add cursor
     chart.cursor = new am4charts.RadarCursor();
+  },
+  methods: {
+    getMonthsSince(date) {
+      const now = new Date();
+      let months = (now.getFullYear() - date.getFullYear()) * 12;
+      months -= date.getMonth();
+      months += now.getMonth();
+      return months <= 0 ? 0 : months;
+    },
   },
 };
 </script>
