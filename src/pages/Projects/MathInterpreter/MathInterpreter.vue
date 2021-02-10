@@ -11,6 +11,7 @@
       <b-input id="expression-input" size="lg" placeholder="Enter your expression here"
                v-model="inputExpression" v-on:keyup.enter="getResult"/>
       <b-row>
+        <!-- TODO(mark) Make sure to add this back in, once there is BE support -->
 <!--        <b-col>-->
 <!--          <span>Display Precision: {{ displayPrecision }}-->
 <!--          </span>-->
