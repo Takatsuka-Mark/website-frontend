@@ -8,7 +8,7 @@
       Education - <span class="fw-semi-bold">Getting Schooled ʕ•́ᴥ•̀ʔっ</span>
     </h1>
     <b-row>
-<!--      <b-col lg="7">-->
+      <!--      <b-col lg="7">-->
       <b-col>
         <Widget title="<h5>Timeline</h5>" custom-header>
           <AboutMeTimeline/>
@@ -34,7 +34,10 @@ import AboutMeTimeline from '@/components/Charts/Timeline/AboutMeTimeline/AboutM
 export default {
   name: 'Education',
   title: 'Mark Takatsuka - Education',
-  components: { AboutMeTimeline, Widget },
+  components: {
+    AboutMeTimeline,
+    Widget,
+  },
 };
 </script>
 
