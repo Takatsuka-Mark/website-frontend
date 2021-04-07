@@ -32,6 +32,7 @@
           <b-col>
             <Widget title="<h2><b>Software Skills</b></h2>" custom-header
                     class="bg-transparent">
+              <br/>
               <b-container>
                 <b-row sm="4">
                   <b-img src="Logos/AWS.png" height="30px" style="margin-right: 10px"/>
