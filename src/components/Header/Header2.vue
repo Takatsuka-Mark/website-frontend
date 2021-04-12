@@ -46,12 +46,16 @@ export default {
 #logo path:nth-child(1) {
   stroke-dasharray: 801px;
   stroke-dashoffset: 801px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   animation: logo-anim 2s ease forwards;
 }
 
 #logo path:nth-child(2) {
   stroke-dasharray: 363px;
   stroke-dashoffset: 363px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   animation: logo-anim 2s ease forwards;
 }
 
