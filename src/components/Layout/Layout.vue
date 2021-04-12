@@ -1,26 +1,26 @@
 <template>
-<div :class="{root: true, sidebarClose}">
-  <Header/>
-  <NavBar/>
-  <div ref="content" class="content animated fadeInUp">
-    <transition name="router-animation">
-      <router-view/>
-    </transition>
-  </div>
+  <div>
+<!--<div :class="{root: true, sidebarClose}">-->
+  <Header2/>
+<!--  <NavBar/>-->
+<!--  <div ref="content" class="content animated fadeInUp">-->
+<!--    <transition name="router-animation">-->
+<!--      <router-view/>-->
+<!--    </transition>-->
+<!--  </div>-->
 </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex';
 
-import NavBar from '@/components/NavBar/NavBar.vue';
-import Header from '@/components/Header/Header.vue';
+import Header2 from '@/components/Header/Header2.vue';
 
 import './Layout.scss';
 
 export default {
   name: 'Layout',
-  components: { NavBar, Header },
+  components: { Header2 },
   methods: {
     ...mapActions(
       'layout', ['switchSidebar', 'changeSidebarActive'],
