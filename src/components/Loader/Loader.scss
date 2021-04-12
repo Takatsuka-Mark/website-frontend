@@ -6,18 +6,22 @@
 
   stroke: #3b3d3d;
   stroke-width: 7;
-  //animation: fill 0.5s ease forwards 3.5s;
+  animation: fill 0.5s ease forwards 2s;
 }
 
 #preloader path:nth-child(1) {
-  stroke-dasharray: 801px;
-  stroke-dashoffset: 801px;
+  stroke-dasharray: 801;
+  stroke-dashoffset: 801;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   animation: logo-anim 2s ease forwards;
 }
 
 #preloader path:nth-child(2) {
-  stroke-dasharray: 363px;
-  stroke-dashoffset: 363px;
+  stroke-dasharray: 364;
+  stroke-dashoffset: 364;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   animation: logo-anim 2s ease forwards;
 }
 
