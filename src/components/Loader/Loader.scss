@@ -1,12 +1,13 @@
+@import '../../styles/new_theme';
 #preloader {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  stroke: #3b3d3d;
+  stroke: $theme-0;
   stroke-width: 7;
-  animation: fill 0.5s ease forwards 2s;
+  animation: fill 0.5s ease forwards 2s, fade-logo-out 1s ease forwards 3s;
 }
 
 #preloader path:nth-child(1) {
@@ -35,7 +36,10 @@
     fill: transparent;
   }
   to {
-    fill: #3b3d3d;
+    fill: $theme-0;
   }
 }
-
+@keyframes fade-logo-out {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}

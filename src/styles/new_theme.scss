@@ -1,0 +1,16 @@
+// Theme bb on https://coolors.co/u/mark_takatsuka
+$theme-0: #0B2027 !default;
+$theme-1: #40798C !default;
+$theme-2: #70A9A1 !default;
+$theme-3: #CFD7C7 !default;
+$theme-4: #F6F1D1 !default;
+
+$eggshell: #f0ead6 !default;
+
+$theme-background: $theme-4 !default;
+$theme-text-color: $theme-0 !default;
+
+body {
+  color: $theme-text-color;
+  background: $eggshell;
+}
