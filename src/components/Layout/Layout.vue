@@ -3,11 +3,11 @@
 <!--<div :class="{root: true, sidebarClose}">-->
   <Header2/>
 <!--  <NavBar/>-->
-<!--  <div ref="content" class="content animated fadeInUp">-->
+  <div ref="content" class="content animated fadeInUp">
 <!--    <transition name="router-animation">-->
-<!--      <router-view/>-->
+      <router-view/>
 <!--    </transition>-->
-<!--  </div>-->
+  </div>
 </div>
 </template>
 

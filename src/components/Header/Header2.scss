@@ -1,0 +1,96 @@
+@import '../../styles/new_theme';
+
+.app-header{
+  z-index: 100;
+  padding-bottom: 1.85rem;
+}
+
+#logo {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 50px;
+  height: 35px;
+  stroke: $theme-0;
+  stroke-width: 5;
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 801px;
+  stroke-dashoffset: 801px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: logo-anim 2s ease forwards;
+}
+
+#logo path:nth-child(2) {
+  stroke-dasharray: 363px;
+  stroke-dashoffset: 363px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: logo-anim 2s ease forwards;
+}
+
+@keyframes logo-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  to {
+    fill: $theme-0;
+  }
+}
+
+.menu {
+  background-color:transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+#hamburger {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  height: 35px;
+  width: 35px;
+  stroke: $theme-0;
+  stroke-width: 6;
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+  stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
