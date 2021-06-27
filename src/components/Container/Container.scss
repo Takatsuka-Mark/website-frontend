@@ -1,0 +1,17 @@
+@import '../../styles/new_theme';
+
+.title {
+  margin-top: 0;
+  color: $theme-text-color;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding: $container-padding-vertical $container-padding-horizontal;
+}
+
+.container-contents {
+  // TODO Remove this
+  border: dashed #0B2027;
+}

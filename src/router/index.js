@@ -10,6 +10,7 @@ import Construction from '@/pages/Construction/Construction.vue';
 import Education from '@/pages/AboutMe/Education/Education/Education.vue';
 import Overview from '@/pages/AboutMe/Overview/Overview.vue';
 import MathInterpreter from '@/pages/Projects/MathInterpreter/MathInterpreter.vue';
+import TestPage from '@/pages/TestPage/TestPage.vue';
 
 Vue.use(VueRouter);
 
@@ -53,6 +54,11 @@ const routes = [
         path: 'math',
         name: 'MathInterpreter',
         component: MathInterpreter,
+      },
+      {
+        path: 'test',
+        name: 'TestPage',
+        component: TestPage,
       },
     ],
   },
