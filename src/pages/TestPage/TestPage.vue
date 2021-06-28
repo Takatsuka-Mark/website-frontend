@@ -1,14 +1,14 @@
 <template>
   <div>
-    <Container>
-      <div class="wrapper">
-        <div class="title-block">
-          Hi, I'm Mark :D
-        </div>
-        <div class="text-block">
-          Welcome to my experimental website!
-        </div>
-      </div>
+    <Container horizontal_title="true">
+      <template slot="ht_title">
+        Hi, I'm Mark <span style="width: 2rem"/> (^o^)/
+      </template>
+      <template slot="ht_body">
+        Welcome to my experimental website!
+        this is a lot of text that I am just
+        putting in here so that it gets filled with even more text
+      </template>
     </Container>
   </div>
 </template>
@@ -23,28 +23,4 @@ export default {
 </script>
 
 <style scoped>
-
-.wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.title-block .text-block {
-  width: 50%
-}
-
-@media screen and (min-width: 900px) {
-  .title-block .text-block {
-    width: 100%
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .wrapper {
-    display: block;
-  }
-}
-.text-block{
-
-}
 </style>

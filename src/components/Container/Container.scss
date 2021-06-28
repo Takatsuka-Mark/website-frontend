@@ -15,3 +15,35 @@
   // TODO Remove this
   border: dashed #0B2027;
 }
+
+/*
+Horizontal Title Text box
+
+---------------------------
+|   [title]   |   [text]  |
+---------------------------
+*/
+.ht_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ht_title {
+  font-size: xx-large;
+  text-align: center;
+}
+
+.ht_title, .ht_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0.75rem
+}
+
+@media screen and (max-width: 900px) {
+  .ht_wrapper {
+    display: block;
+  }
+}
