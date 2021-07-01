@@ -6,14 +6,16 @@
 }
 
 .container {
-  display: block;
   position: relative;
   padding: $container-padding-vertical $container-padding-horizontal;
-}
-
-.container-contents {
+  width: 100%;
+  margin: $container-margin-vertical $container-margin-horizontal;
   // TODO Remove this
   border: dashed #0B2027;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*
@@ -26,6 +28,7 @@ Horizontal Title Text box
 .ht_wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .ht_title {
