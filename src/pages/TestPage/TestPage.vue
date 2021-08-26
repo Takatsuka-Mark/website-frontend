@@ -1,23 +1,49 @@
 <template>
   <div>
     <div class="center_column">
-      <Container class="intro_container" horizontal_title="true">
+      <!-- Intro -->
+      <Container class="intro_container" HT="true">
         <template slot="ht_title">
-          Hi, I'm Mark <span style="width: 2rem"/> (^o^)/
+          ◝ʕ •ᴥ• ʔ◜
         </template>
         <template slot="ht_body">
-          Welcome to my experimental website!
-          this is a lot of text that I am just
-          putting in here so that it gets filled with even more text
+          <h2>Welcome!</h2>
         </template>
       </Container>
-      <Container class="education_container" horizontal_title="true" horizontal_title_left="false">
+      <!-- Employment -->
+      <Container class="employment_container" HT_Right="true">
+        <template slot="ht_title">
+          Employment
+        </template>
+        <template slot="ht_body">
+          employment
+        </template>
+      </Container>
+      <!-- Projects -->
+      <Container class="projects_container" HT="true">
+        <template slot="ht_title">
+          Projects
+        </template>
+        <template slot="ht_body">
+          projects
+        </template>
+      </Container>
+      <!-- Education -->
+      <Container class="education_container" HT_Right="true">
         <template slot="ht_title">
           Education
         </template>
         <template slot="ht_body">
-          This is a ton of information about education that I'm just so willing to pass around
-          with absolutely no consideration of life at all
+          education
+        </template>
+      </Container>
+      <!-- Contact -->
+      <Container class="contact_container" HT="true">
+        <template slot="ht_title">
+          Contact
+        </template>
+        <template slot="ht_body">
+          contact
         </template>
       </Container>
     </div>
@@ -40,7 +66,10 @@ export default {
   align-items: flex-start;
   margin: 0 auto;
 }
-.intro_container, .education_container {
+
+.intro_container, .education_container,
+.employment_container, .contact_container,
+.projects_container {
   align-self: center;
   max-width: 1200px;
   min-height: 100px;

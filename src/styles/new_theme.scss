@@ -8,12 +8,53 @@ $theme-4: #F6F1D1 !default;
 $eggshell: #f0ead6 !default;
 
 $theme-background: $theme-4 !default;
-$theme-text-color: $theme-0 !default;
+$theme-text-color: rgba($theme-0, 0.9) !default;
+
+html {
+  font-weight: 100;
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
 
 body {
   color: $theme-text-color;
-  background: $eggshell;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  background: $eggshell;    // TODO is this what we want?
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
+
+/*
+Headings
+ */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  font-weight: 200;
+  line-height: 1.2;
+}
+h1, .h1 {
+  font-size: 2.5rem
+}
+h2, .h2 {
+  font-size: 2rem;
+}
+h3, .h3 {
+  font-size: 1.75rem;
+}
+h4, .h4 {
+  font-size: 1.5rem;
+}
+h5, .h5 {
+  font-size: 1.25rem;
+}
+h6, .h6 {
+  font-size: 1rem;
+}
+
 
 /*
 Container stuff
@@ -22,3 +63,4 @@ $container-padding-vertical: 1rem !default;
 $container-padding-horizontal: 1rem !default;
 $container-margin-vertical: 1rem !default;
 $container-margin-horizontal: 1rem !default;
+$container-background-color: #CFD7C7 !default;

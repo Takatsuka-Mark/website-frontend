@@ -16,6 +16,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
 }
 
 /*
@@ -29,11 +31,15 @@ Horizontal Title Text box
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 0.75rem;
 }
 
 .ht_title {
   font-size: xx-large;
   text-align: center;
+  border: dashed; // TODO remove
 }
 
 .ht_title, .ht_body {
@@ -42,7 +48,8 @@ Horizontal Title Text box
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 0.75rem
+  padding: 0.75rem;
+  border: dashed; // TODO remove
 }
 
 @media screen and (max-width: 900px) {
