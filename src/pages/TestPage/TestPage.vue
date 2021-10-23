@@ -26,6 +26,9 @@
         </template>
         <template slot="ht_body">
           projects
+          <router-link to="/app/math" class="sidebar-link">
+            This is the link to the project
+          </router-link>
         </template>
       </Container>
       <!-- Education -->

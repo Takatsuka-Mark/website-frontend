@@ -9,7 +9,7 @@ import Resume from '@/pages/AboutMe/Resume/Resume.vue';
 import Construction from '@/pages/Construction/Construction.vue';
 import Education from '@/pages/AboutMe/Education/Education/Education.vue';
 import Overview from '@/pages/AboutMe/Overview/Overview.vue';
-import MathInterpreter from '@/pages/Projects/MathInterpreter/MathInterpreter.vue';
+import MathInterpreter2 from '@/pages/Projects/MathInterpreter2/MathInterpreter2.vue';
 import TestPage from '@/pages/TestPage/TestPage.vue';
 
 Vue.use(VueRouter);
@@ -53,7 +53,7 @@ const routes = [
       {
         path: 'math',
         name: 'MathInterpreter',
-        component: MathInterpreter,
+        component: MathInterpreter2,
       },
       {
         path: 'test',
