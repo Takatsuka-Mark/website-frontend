@@ -2,6 +2,7 @@
 <div class="expression_input">
   <Container FULL="true">
     <template slot="full_body">
+      <h1>Math Interpreter</h1>
       <div class="expressionInput">
         <b-input id="expression-input" size="lg" placeholder="Enter some maths here"
                  v-model="inputExpression" v-on:keyup.enter="getResult"/>
@@ -47,9 +48,15 @@ export default {
       const agent = new https.Agent({
         rejectUnauthorized: false,
       });
-      get(`https://backend.marktakatsuka.com:8085/math/evaluate?${searchParams.toString()}`, { httpsAgent: agent })
+      // TODO: Change this back
+      get(`http://localhost:8085/math/evaluate?${searchParams.toString()}`, { httpsAgent: agent })
         .then((response) => { this.result = response.data; this.loading = false; })
         .catch(() => { this.result = 'An error occurred when contacting the endpoint'; this.loading = false; });
+      // get(`https://backend.marktakatsuka.com:8085/math/evaluate?${searchParams.toString()}`,
+      //  { httpsAgent: agent })
+      //   .then((response) => { this.result = response.data; this.loading = false; })
+      //   .catch(() => {
+      //   this.result = 'An error occurred when contacting the endpoint'; this.loading = false; });
       // eslint-disable-next-line
       console.log(this.result);
     },

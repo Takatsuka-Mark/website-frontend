@@ -15,5 +15,5 @@ export default {
 };
 </script>
 
-<!--<style src="./styles/new_theme.scss" lang="scss" />-->
-<style src="./styles/theme.scss" lang="scss" />
+<style src="./styles/new_theme.scss" lang="scss" />
+<!--<style src="./styles/theme.scss" lang="scss" />-->
