@@ -7,16 +7,7 @@
           ◝ʕ •ᴥ• ʔ◜
         </template>
         <template slot="ht_body">
-          <h2>Welcome!</h2>
-        </template>
-      </Container>
-      <!-- Employment -->
-      <Container class="employment_container" HT_Right="true">
-        <template slot="ht_title">
-          Employment
-        </template>
-        <template slot="ht_body">
-          employment
+          <h1>Welcome!</h1>
         </template>
       </Container>
       <!-- Projects -->
@@ -25,28 +16,48 @@
           Projects
         </template>
         <template slot="ht_body">
-          projects
           <router-link to="/app/math" class="sidebar-link">
-            This is the link to the project
+            <h2>Math Interpreter</h2>
           </router-link>
         </template>
       </Container>
+      <!-- Employment -->
+      <Container class="employment_container" HT_Right="true">
+        <template slot="ht_title">
+          Employment
+        </template>
+        <template slot="ht_body">
+          <h2><b>IBM</b></h2>
+          <h3>DevOps Intern</h3>
+          <h4>May. 2021 - Aug. 2021</h4>
+          <br>
+          <h2><b>SecureCloudDB</b></h2>
+          <h3>Software Engineering Intern</h3>
+          <h4>May. 2020 - Dec. 2020</h4>
+        </template>
+      </Container>
       <!-- Education -->
-      <Container class="education_container" HT_Right="true">
+      <Container class="education_container" HT="true">
         <template slot="ht_title">
           Education
         </template>
         <template slot="ht_body">
-          education
+          <h2><b>Rochester Institute of Technology (RIT)</b></h2>
+          <h3>B.S. in Computer Science</h3>
+          <h3>Minor in Mathematics</h3>
+          <h4>Aug. 2018 - Dec. 2021</h4>
         </template>
       </Container>
       <!-- Contact -->
-      <Container class="contact_container" HT="true">
+      <Container class="contact_container" HT_Right="true">
         <template slot="ht_title">
           Contact
         </template>
         <template slot="ht_body">
-          contact
+          Connect with me on LinkedIn at
+          <a :href="'//www.linkedin.com/in/mark-takatsuka'" target="_blank">
+            linkedin.com/in/mark-takatsuka
+          </a>
         </template>
       </Container>
     </div>
@@ -62,19 +73,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.center_column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 auto;
-}
-
-.intro_container, .education_container,
-.employment_container, .contact_container,
-.projects_container {
-  align-self: center;
-  max-width: 1200px;
-  min-height: 100px;
-}
-</style>
+<style src="./TestPage.scss" lang="scss"/>

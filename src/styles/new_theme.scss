@@ -59,6 +59,17 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+/*
+Links
+ */
+a, .a{
+  color: $theme-1;
+}
+a:hover{
+  color: $theme-2;
+  text-decoration: none;
+}
+
 
 /*
 Container stuff

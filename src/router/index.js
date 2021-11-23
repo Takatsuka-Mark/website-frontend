@@ -5,7 +5,6 @@ import Layout from '@/components/Layout/Layout.vue';
 // import LandingPage from '@/pages/LandingPage/LandingPage.vue';
 import ErrorPage from '@/pages/Error/ErrorPage.vue';
 // import PersonalStats from '@/pages/PersonalStats/PersonalStats.vue';
-import Resume from '@/pages/AboutMe/Resume/Resume.vue';
 import Construction from '@/pages/Construction/Construction.vue';
 import Education from '@/pages/AboutMe/Education/Education/Education.vue';
 import Overview from '@/pages/AboutMe/Overview/Overview.vue';
@@ -39,11 +38,6 @@ const routes = [
         path: 'education',
         name: 'Education',
         component: Education,
-      },
-      {
-        path: 'resume',
-        name: 'Resume',
-        component: Resume,
       },
       {
         path: 'construction',
