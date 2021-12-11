@@ -16,7 +16,7 @@
           Projects
         </template>
         <template slot="ht_body">
-          <router-link to="/app/math" class="sidebar-link">
+          <router-link to="/math" class="sidebar-link">
             <h2>Math Interpreter</h2>
           </router-link>
         </template>

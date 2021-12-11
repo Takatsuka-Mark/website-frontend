@@ -15,7 +15,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/app',
+    path: '/',
     name: 'Layout',
     component: Layout,
     children: [
@@ -64,7 +64,7 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   routes,
 });
 
