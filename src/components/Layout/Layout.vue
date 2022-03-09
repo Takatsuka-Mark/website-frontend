@@ -1,9 +1,9 @@
 <template>
   <div>
 <!--<div :class="{root: true, sidebarClose}">-->
-  <Header2/>
+  <Header/>
 <!--  <NavBar/>-->
-  <div ref="content" class="content animated fadeInUp">
+  <div ref="content" class="content">
 <!--    <transition name="router-animation">-->
       <router-view/>
 <!--    </transition>-->
@@ -14,13 +14,13 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 
-import Header2 from '@/components/Header/Header2.vue';
+import Header from '@/components/Header/Header.vue';
 
 import './Layout.scss';
 
 export default {
   name: 'Layout',
-  components: { Header2 },
+  components: { Header },
   methods: {
     ...mapActions(
       'layout', ['switchSidebar', 'changeSidebarActive'],
