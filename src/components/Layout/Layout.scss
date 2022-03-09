@@ -1,9 +1,9 @@
-@import '../../styles/app.scss';
+@import '../../styles/theme';
 
 .root {
   height: 100%;
   @include media-breakpoint-up('md') {
-    margin-left: $sidebar-width;
+    margin-left: 200px;
 
     @media print {
       margin-left: 0;
@@ -17,6 +17,7 @@
   // 1rem for footer height
   padding: $content-padding $content-padding ($content-padding + 1rem);
 
+
   @media (max-width: breakpoint-max(sm)) {
     padding: 20px 15px 40px;
   }
@@ -25,11 +26,16 @@
   @media (min-width: breakpoint-min(sm)) {
     user-select: auto !important;
   }
+
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 3.5s;
 }
 
-.contentFooter {
-  position: absolute;
-  bottom: 15px;
-  color: $text-muted;
-  padding: 0 $content-padding;
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {opacity: 1;}
 }

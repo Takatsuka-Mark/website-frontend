@@ -1,14 +1,47 @@
-@import "../../styles/app";
+@import '../../styles/theme';
 
-.data-loader {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#preloader {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
 
-  i {
-    font-size: 21px;
-    margin: 0 $spacer;
+  stroke: $theme-0;
+  stroke-width: 7;
+  // name, duration, timing, delay
+  animation: fill 0.5s ease forwards 1.5s, fade-logo-out 1s ease forwards 2.5s;
+}
+
+#preloader path:nth-child(1) {
+  stroke-dasharray: 801;
+  stroke-dashoffset: 801;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: logo-anim 1.5s ease forwards;
+}
+
+#preloader path:nth-child(2) {
+  stroke-dasharray: 364;
+  stroke-dashoffset: 364;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: logo-anim 1.5s ease forwards;
+}
+
+@keyframes logo-anim {
+  to {
+    stroke-dashoffset: 0;
   }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: $theme-0;
+  }
+}
+@keyframes fade-logo-out {
+  from {opacity: 1;}
+  to {opacity: 0;}
 }

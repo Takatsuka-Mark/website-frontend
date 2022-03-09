@@ -4,7 +4,7 @@
       <div class="errorContainer mx-auto">
         <h1 class="errorCode">404</h1>
         <p class="errorInfo">
-          Oops, something went wrong!
+          Woah, how did you get here?
         </p>
       </div>
     </b-container>
