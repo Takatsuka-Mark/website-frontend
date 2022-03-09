@@ -1,12 +1,14 @@
 env: standard
-runtime: nodejs12
+runtime: nodejs16
 service: default
 handlers:
-  - url: /
+  # Handle static files.
+  - url: /(.*\..+)$
+    static_files: dist/\1
+    upload: dist/(.*\..+)$
+    secure: always
+  # Catch all
+  - url: /.*
     static_files: dist/index.html
     upload: dist/index.html
-    secure: always
-
-  - url: /
-    static_dir: dist
     secure: always
