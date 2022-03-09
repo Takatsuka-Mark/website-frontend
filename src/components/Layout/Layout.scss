@@ -1,9 +1,9 @@
-@import '../../styles/app.scss';
+@import '../../styles/theme';
 
 .root {
   height: 100%;
   @include media-breakpoint-up('md') {
-    margin-left: $sidebar-width;
+    margin-left: 200px;
 
     @media print {
       margin-left: 0;
@@ -29,13 +29,6 @@
 
   opacity: 0;
   animation: fadeIn 1s ease forwards 3.5s;
-}
-
-.contentFooter {
-  position: absolute;
-  bottom: 15px;
-  color: $text-muted;
-  padding: 0 $content-padding;
 }
 
 

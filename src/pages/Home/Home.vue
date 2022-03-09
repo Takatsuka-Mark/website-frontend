@@ -38,6 +38,7 @@
           <h2><b>Rochester Institute of Technology (RIT)</b></h2>
           <h3>B.S. in Computer Science</h3>
           <h3>Minor in Mathematics</h3>
+          <h4>GPA: 3.90</h4>
           <h4>Aug. 2018 - Dec. 2021</h4>
         </template>
       </Container>
