@@ -3,6 +3,7 @@
   <Container FULL="true">
     <template slot="full_body">
       <h2><b>Math Interpreter</b></h2>
+      <h5>Version: {{ version }}</h5>
       <div class="expressionInput">
         <b-input id="expression-input" size="lg" placeholder="Enter an expression here"
                  v-model="inputExpression" v-on:keyup.enter="getResult"/>
@@ -35,25 +36,24 @@ export default {
   },
   data: () => ({
     inputExpression: '',
-    result: 'Results shown here',
+    version: 'Loading version...',
+    result: 'Type an equation!',
     displayPrecision: '10',
     loading: false,
+    agent: null,
   }),
+  mounted() {
+    this.agent = new https.Agent({ rejectUnauthorized: false });
+    this.getVersion();
+  },
   methods: {
     getResult() {
       this.result = 'Waiting for BE.';
       this.loading = true;
       const searchParams = new URLSearchParams();
       searchParams.append('expression', this.inputExpression);
-      const agent = new https.Agent({
-        rejectUnauthorized: false,
-      });
-      // get(`http://localhost:8085/math/evaluate?${searchParams.toString()}`, { httpsAgent: agent })
-      //   .then((response) => { this.result = response.data; this.loading = false; })
-      //   .catch(() => { this.result =
-      //    'An error occurred when contacting the endpoint'; this.loading = false; });
       get(`https://backend.marktakatsuka.com:8085/math/evaluate?${searchParams.toString()}`,
-        { httpsAgent: agent })
+        { httpsAgent: this.agent })
         .then((response) => { this.result = response.data; this.loading = false; })
         .catch(() => {
           this.result = 'An error occurred'; this.loading = false;
@@ -63,6 +63,12 @@ export default {
     },
     isSelected(i) {
       return i === this.selected;
+    },
+    getVersion() {
+      get('https://backend.marktakatsuka.com:8085/version',
+        { httpsAgent: this.agent })
+        .then((response) => { this.version = response.data; })
+        .catch(() => { this.version = 'Failed fetching version'; });
     },
   },
 };
