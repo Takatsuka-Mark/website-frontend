@@ -20,7 +20,7 @@
   stroke-dashoffset: 801px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  animation: logo-anim 2s ease forwards;
+  animation: logo-anim $logo_trace_in ease forwards;
 }
 
 #logo path:nth-child(2) {
@@ -28,7 +28,7 @@
   stroke-dashoffset: 363px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  animation: logo-anim 2s ease forwards;
+  animation: logo-anim $logo_trace_in ease forwards;
 }
 
 @keyframes logo-anim {
