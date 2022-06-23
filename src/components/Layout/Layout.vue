@@ -1,43 +1,51 @@
 <template>
   <div>
 <!--<div :class="{root: true, sidebarClose}">-->
-  <Header/>
-<!--  <NavBar/>-->
-  <div ref="content" class="content">
-<!--    <transition name="router-animation">-->
-      <router-view/>
-<!--    </transition>-->
+    <transition name="hide-navbar">
+      <Header v-if="show_navbar"/>
+<!--      <Header/>-->
+    </transition>
+    <Loader/>
+  <!--  <NavBar/>-->
+    <div ref="content" class="content">
+  <!--    <transition name="router-animation">-->
+        <router-view/>
+  <!--    </transition>-->
+    </div>
   </div>
-</div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
-
 import Header from '@/components/Header/Header.vue';
+import Loader from '@/components/Loader/Loader.vue';
 
 import './Layout.scss';
 
 export default {
   name: 'Layout',
-  components: { Header },
+  components: { Header, Loader },
+  data() {
+    return {
+      show_navbar: true,
+      last_y: 0,
+    };
+  },
   methods: {
-    ...mapActions(
-      'layout', ['switchSidebar', 'changeSidebarActive'],
-    ),
+    handleScroll() {
+      const { scrollY } = window;
+      this.show_navbar = scrollY <= this.last_y;
+      this.last_y = scrollY;
+    },
   },
   computed: {
-    ...mapState('layout', {
-      sidebarClose: (state) => state.sidebarClose,
-    }),
   },
   created() {
   },
   mounted() {
-    this.$refs.content.addEventListener('animationend', () => {
-      this.$refs.content.classList.remove('animated');
-      this.$refs.content.classList.remove('fadeInUp');
-    });
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
   },
 };
 </script>

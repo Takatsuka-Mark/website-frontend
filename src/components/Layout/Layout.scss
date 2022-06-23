@@ -31,11 +31,19 @@
   animation: fadeIn $page_fade_in ease forwards $logo_trace_in + $logo_show_time + $logo_fade_out;
 }
 
-
-
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {opacity: 1;}
+}
+
+.hide-navbar-enter-active {
+  //transition: transform 1s;
+  transform: translateY(100%);
+}
+
+.hide-navbar-leave-active {
+  //transition: transform 1s;
+  transform: translateY(-100%);
 }

@@ -3,6 +3,10 @@
 .app-header{
   z-index: 100;
   padding-bottom: 3rem;
+  outline: dashed;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 #logo {

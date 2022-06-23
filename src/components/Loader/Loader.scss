@@ -9,7 +9,7 @@
   stroke: $theme-0;
   stroke-width: 7;
   // name, duration, timing, delay
-  animation: fill 0.5s ease forwards $logo_trace_in, fade-logo-out 1s ease forwards $logo_trace_in + $logo_show_time;
+  animation: fill 0.5s ease forwards $logo_trace_in, fade-logo-out $logo_fade_out ease forwards $logo_trace_in + $logo_show_time;
 }
 
 #preloader path:nth-child(1) {
