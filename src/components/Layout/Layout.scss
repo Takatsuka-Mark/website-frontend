@@ -35,15 +35,50 @@
   from {
     opacity: 0;
   }
-  to {opacity: 1;}
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  animation: lockOverflow $logo_trace_in + $logo_show_time + $logo_fade_out steps(1, end) forwards;
+}
+
+@keyframes lockOverflow {
+  from {
+    overflow-y: hidden;
+    height: 100%;
+  }
+  to {
+    overflow-y: auto;
+    height: auto;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scaleY(0%)
+  }
+  to {
+    transform: scaleY(100%)
+  }
+}
+
+.loader {
+  z-index: 1000;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
 }
 
 .hide-navbar-enter-active {
-  //transition: transform 1s;
-  transform: translateY(100%);
+  animation: slideIn 0.4s;
 }
-
 .hide-navbar-leave-active {
-  //transition: transform 1s;
-  transform: translateY(-100%);
+  animation: slideIn 0.4s reverse;
+  //transition: max-height
 }

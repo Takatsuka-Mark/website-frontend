@@ -1,11 +1,10 @@
 <template>
   <div>
 <!--<div :class="{root: true, sidebarClose}">-->
-    <transition name="hide-navbar">
-      <Header v-if="show_navbar"/>
-<!--      <Header/>-->
-    </transition>
-    <Loader/>
+    <Transition name="hide-navbar">
+      <Header v-if="show_navbar && show_navbar2" class="header"/>
+    </Transition>
+    <Loader class="loader"/>
   <!--  <NavBar/>-->
     <div ref="content" class="content">
   <!--    <transition name="router-animation">-->
@@ -27,6 +26,7 @@ export default {
   data() {
     return {
       show_navbar: true,
+      show_navbar2: false,
       last_y: 0,
     };
   },
@@ -40,6 +40,9 @@ export default {
   computed: {
   },
   created() {
+    this.last_y = window;
+    // eslint-disable-next-line no-return-assign
+    setTimeout(() => this.show_navbar2 = true, 2850);
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);

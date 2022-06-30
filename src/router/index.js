@@ -36,6 +36,12 @@ const routes = [
 const router = new VueRouter({
   mode: 'history',
   routes,
+  // TODO may want to allow center
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 };
+  },
 });
 
 export default router;
