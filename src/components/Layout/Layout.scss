@@ -15,7 +15,7 @@
   position: relative;
   flex-grow: 1;
   // 1rem for footer height
-  padding: $content-padding $content-padding ($content-padding + 1rem);
+  padding: 5rem $content-padding ($content-padding + 1rem);
 
 
   @media (max-width: breakpoint-max(sm)) {
@@ -73,6 +73,7 @@ html {
   top: 0;
   left: 0;
   z-index: 999;
+  width: 100%;
 }
 
 .hide-navbar-enter-active {

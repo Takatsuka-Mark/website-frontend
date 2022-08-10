@@ -2,7 +2,7 @@
 <div class="expression_input">
   <Container FULL="true">
     <template slot="full_body">
-      <h2><b>Math Interpreter</b></h2>
+      <h1><b>Math Interpreter</b></h1>
       <h5>Version: {{ version }}</h5>
       <div class="expressionInput">
         <b-input id="expression-input" size="lg" placeholder="Enter an expression here"

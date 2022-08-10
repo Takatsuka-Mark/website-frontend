@@ -1,19 +1,26 @@
 <template>
   <div>
     <div class="app-header">
-        <!-- Logo -->
-        <svg id="logo" width="205" height="113" viewBox="0 0 205 113" fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M22.4375 5L55.9062 88.5312L89.375 5H106.883V107.375H93.3828V67.5078L94.6484
-            24.4766L61.0391 107.375H50.7031L17.1641 24.6875L18.5 67.5078V107.375H5V5H22.4375Z"
-            mask="url(#path-1-outside-1)"/>
-          <path d="M199.344 16.1094H166.438V107.375H153.008V16.1094H120.172V5H199.344V16.1094Z"
-                mask="url(#path-1-outside-1)"/>
-        </svg>
-        <!-- TODO either pin and expand on the top like splunk.com. Or, pin and hide like x.company.
-        But, keep the expanded desktop view like on splunk.com. Not sure if I like the drop-dwon
-        menu or the full hamburgered menu version. I think drop down.-->
+      <!-- Logo -->
+      <svg id="logo" width="205" height="113" viewBox="0 0 205 113" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M22.4375 5L55.9062 88.5312L89.375 5H106.883V107.375H93.3828V67.5078L94.6484
+          24.4766L61.0391 107.375H50.7031L17.1641 24.6875L18.5 67.5078V107.375H5V5H22.4375Z"
+          mask="url(#path-1-outside-1)"/>
+        <path d="M199.344 16.1094H166.438V107.375H153.008V16.1094H120.172V5H199.344V16.1094Z"
+              mask="url(#path-1-outside-1)"/>
+      </svg>
+      <div class="routes">
+        <router-link to="/home">
+          <h2><b>Home</b></h2>
+        </router-link>
+      </div>
+      <div class="routes">
+        <router-link to="/math">
+          <h2><b>Math</b></h2>
+        </router-link>
+      </div>
         <!-- TODO reimplement hamburger when more pages are added -->
   <!--      <button class="menu" v-bind:class="[hamburgerIsActive? 'opened': null]"-->
   <!--              v-on:click="toggleHamburger">-->

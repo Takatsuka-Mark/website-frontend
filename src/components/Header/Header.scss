@@ -1,19 +1,29 @@
 @import '../../styles/theme';
 
 .app-header{
-  z-index: 100;
-  padding-bottom: 3rem;
+  padding: 1.0rem;
+  //padding-bottom: 3rem;
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: rgb(244, 239, 224);
+
+  // TODO Create a backdrop shadow? Perhaps a different color or outline
+  // to separate from text boxes.
+  // TODO fix dimensions.
+  // TODO could pick a theme color for this + containers.
+
+  display: flex;
+  flex-direction: row;
+  outline: dashed;  // TODO remove
+  column-gap: 5rem;
 }
 
 #logo {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 50px;
-  height: 35px;
+  // 5x3.5 ratio
+
+  height: $logo_width*0.7;
+  width: $logo_width;
   stroke: $theme-0;
   stroke-width: 5;
 }
@@ -96,4 +106,8 @@
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
+}
+
+.routes {
+  height: 100%;
 }
