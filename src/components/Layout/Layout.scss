@@ -17,11 +17,6 @@
   // 1rem for footer height
   padding: 5rem $content-padding ($content-padding + 1rem);
 
-
-  @media (max-width: breakpoint-max(sm)) {
-    padding: 20px 15px 40px;
-  }
-
   // hammers disallows text selection, allowing it for large screens
   @media (min-width: breakpoint-min(sm)) {
     user-select: auto !important;
@@ -82,4 +77,15 @@ html {
 .hide-navbar-leave-active {
   animation: slideIn 0.4s reverse;
   //transition: max-height
+}
+
+
+.router-fade-enter-active,
+.router-fade-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+.router-fade-enter,
+.router-fade-leave-to {
+  opacity: 0;
+  transform: translate(-30%)
 }

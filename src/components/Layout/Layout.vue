@@ -7,9 +7,9 @@
     <Loader class="loader"/>
   <!--  <NavBar/>-->
     <div ref="content" class="content">
-  <!--    <transition name="router-animation">-->
+     <transition name="router-fade" mode="out-in">
         <router-view/>
-  <!--    </transition>-->
+     </transition>
     </div>
   </div>
 </template>

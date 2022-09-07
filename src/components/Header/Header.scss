@@ -1,22 +1,47 @@
 @import '../../styles/theme';
 
 .app-header{
-  padding: 1.0rem;
+  padding: 0;
   //padding-bottom: 3rem;
   position: fixed;
   top: 0;
   width: 100%;
   background-color: rgb(244, 239, 224);
 
-  // TODO Create a backdrop shadow? Perhaps a different color or outline
-  // to separate from text boxes.
-  // TODO fix dimensions.
-  // TODO could pick a theme color for this + containers.
-
   display: flex;
   flex-direction: row;
-  outline: dashed;  // TODO remove
   column-gap: 5rem;
+}
+
+.app-header-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin: 0;
+}
+
+.logo-li {
+  padding: 1rem 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.routes {
+  padding: 0rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.route-text {
+  margin-bottom: 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 #logo {
