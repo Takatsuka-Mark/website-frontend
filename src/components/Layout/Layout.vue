@@ -1,43 +1,54 @@
 <template>
   <div>
 <!--<div :class="{root: true, sidebarClose}">-->
-  <Header/>
-<!--  <NavBar/>-->
-  <div ref="content" class="content">
-<!--    <transition name="router-animation">-->
-      <router-view/>
-<!--    </transition>-->
+    <Transition name="hide-navbar">
+      <Header v-if="show_navbar && show_navbar2" class="header"/>
+    </Transition>
+    <Loader class="loader"/>
+  <!--  <NavBar/>-->
+    <div ref="content" class="content">
+     <transition name="router-fade" mode="out-in">
+        <router-view/>
+     </transition>
+    </div>
   </div>
-</div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
-
 import Header from '@/components/Header/Header.vue';
+import Loader from '@/components/Loader/Loader.vue';
 
 import './Layout.scss';
 
 export default {
   name: 'Layout',
-  components: { Header },
+  components: { Header, Loader },
+  data() {
+    return {
+      show_navbar: true,
+      show_navbar2: false,
+      last_y: 0,
+    };
+  },
   methods: {
-    ...mapActions(
-      'layout', ['switchSidebar', 'changeSidebarActive'],
-    ),
+    handleScroll() {
+      const { scrollY } = window;
+      this.show_navbar = scrollY <= this.last_y;
+      this.last_y = scrollY;
+    },
   },
   computed: {
-    ...mapState('layout', {
-      sidebarClose: (state) => state.sidebarClose,
-    }),
   },
   created() {
+    this.last_y = window;
+    // eslint-disable-next-line no-return-assign
+    setTimeout(() => this.show_navbar2 = true, 2850);
   },
   mounted() {
-    this.$refs.content.addEventListener('animationend', () => {
-      this.$refs.content.classList.remove('animated');
-      this.$refs.content.classList.remove('fadeInUp');
-    });
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
   },
 };
 </script>

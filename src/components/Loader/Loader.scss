@@ -9,7 +9,7 @@
   stroke: $theme-0;
   stroke-width: 7;
   // name, duration, timing, delay
-  animation: fill 0.5s ease forwards 1.5s, fade-logo-out 1s ease forwards 2.5s;
+  animation: fill 0.5s ease forwards $logo_trace_in, fade-logo-out $logo_fade_out ease forwards $logo_trace_in + $logo_show_time;
 }
 
 #preloader path:nth-child(1) {
@@ -17,7 +17,7 @@
   stroke-dashoffset: 801;
   stroke-linecap: round;
   stroke-linejoin: round;
-  animation: logo-anim 1.5s ease forwards;
+  animation: logo-anim $logo_trace_in ease forwards;
 }
 
 #preloader path:nth-child(2) {
@@ -25,7 +25,7 @@
   stroke-dashoffset: 364;
   stroke-linecap: round;
   stroke-linejoin: round;
-  animation: logo-anim 1.5s ease forwards;
+  animation: logo-anim $logo_trace_in ease forwards;
 }
 
 @keyframes logo-anim {

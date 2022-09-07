@@ -1,16 +1,53 @@
 @import '../../styles/theme';
 
 .app-header{
-  z-index: 100;
-  padding-bottom: 3rem;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(244, 239, 224);
+
+  display: flex;
+  flex-direction: row;
+  column-gap: 5rem;
+}
+
+.app-header-nav {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin: 0;
+}
+
+.logo-li {
+  padding: 1rem 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.routes {
+  padding: 0rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.route-text {
+  margin-bottom: 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 #logo {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 50px;
-  height: 35px;
+  // 5x3.5 ratio
+
+  height: $logo_width*0.7;
+  width: $logo_width;
   stroke: $theme-0;
   stroke-width: 5;
 }
@@ -20,7 +57,7 @@
   stroke-dashoffset: 801px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  animation: logo-anim 2s ease forwards;
+  animation: logo-anim $logo_trace_in ease forwards;
 }
 
 #logo path:nth-child(2) {
@@ -28,7 +65,7 @@
   stroke-dashoffset: 363px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  animation: logo-anim 2s ease forwards;
+  animation: logo-anim $logo_trace_in ease forwards;
 }
 
 @keyframes logo-anim {
@@ -93,4 +130,8 @@
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
+}
+
+.routes {
+  height: 100%;
 }
