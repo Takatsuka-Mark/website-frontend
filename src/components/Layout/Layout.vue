@@ -32,8 +32,12 @@ export default {
   },
   methods: {
     handleScroll() {
-      const { scrollY } = window;
-      this.show_navbar = scrollY <= this.last_y;
+      const scrollY = document.body.getBoundingClientRect().top;
+      if (scrollY > this.last_y || scrollY >= 0) {
+        this.show_navbar = true;
+      } else {
+        this.show_navbar = false;
+      }
       this.last_y = scrollY;
     },
   },
