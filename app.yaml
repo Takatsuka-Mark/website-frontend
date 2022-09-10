@@ -1,6 +1,9 @@
 env: standard
 runtime: nodejs16
 service: default
+instance_class: F1
+automatic_scaling:  
+  max_instances: 1
 handlers:
   # Handle static files.
   - url: /(.*\..+)$
