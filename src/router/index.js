@@ -5,6 +5,7 @@ import ErrorPage from '@/pages/Error/ErrorPage.vue';
 // import Construction from '@/pages/Construction/Construction.vue';
 import MathInterpreter from '@/pages/Projects/MathInterpreter/MathInterpreter.vue';
 import Home from '@/pages/Home/Home.vue';
+import Resume from '@/pages/Resume/Resume.vue';
 
 Vue.use(VueRouter);
 
@@ -23,6 +24,11 @@ const routes = [
         path: 'Home',
         name: 'Home',
         component: Home,
+      },
+      {
+        path: 'resume',
+        name: 'Resume',
+        component: Resume,
       },
     ],
   },

@@ -24,6 +24,11 @@
             <h2 class="route-text"><b>Math</b></h2>
           </router-link>
         </li>
+        <li class="routes">
+          <router-link to="/resume">
+            <h2 class="route-text"><b>Resume</b></h2>
+          </router-link>
+        </li>
       </ul>
         <!-- TODO reimplement hamburger when more pages are added -->
   <!--      <button class="menu" v-bind:class="[hamburgerIsActive? 'opened': null]"-->
