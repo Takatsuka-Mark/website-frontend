@@ -1,0 +1,20 @@
+@import '../../styles/theme';
+
+.error {
+  padding-top: 5%;
+  height: 100%;
+
+  .error-container {
+    width: 365px;
+    text-align: center;
+  }
+
+  .error-code {
+    margin: 20px;
+    font-size: 80px;
+  }
+
+  .error-info {
+    font-size: 20px;
+  }
+}

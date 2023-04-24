@@ -1,27 +1,27 @@
+<script setup lang="ts">
+import InitialsSVG from '../InitialsSVG/InitialsSVG.vue';
+</script>
+
 <template>
   <div>
     <div class="app-header">
       <ul class="app-header-nav">
         <li class="logo-li">
-          <!-- Logo -->
-          <svg id="logo" width="205" height="113" viewBox="0 0 205 113" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M22.4375 5L55.9062 88.5312L89.375 5H106.883V107.375H93.3828V67.5078L94.6484
-              24.4766L61.0391 107.375H50.7031L17.1641 24.6875L18.5 67.5078V107.375H5V5H22.4375Z"
-              mask="url(#path-1-outside-1)"/>
-            <path d="M199.344 16.1094H166.438V107.375H153.008V16.1094H120.172V5H199.344V16.1094Z"
-                  mask="url(#path-1-outside-1)"/>
-          </svg>
+          <InitialsSVG id="logo"/>
         </li>
         <li class="routes">
-          <router-link to="/home">
+          <router-link to="/" class="router-link">
             <h2 class="route-text"><b>Home</b></h2>
           </router-link>
         </li>
         <li class="routes">
-          <router-link to="/math">
+          <router-link to="/math" class="router-link">
             <h2 class="route-text"><b>Math</b></h2>
+          </router-link>
+        </li>
+        <li class="routes">
+          <router-link to="/math2" class="router-link">
+            <h2 class="route-text"><b>Math2</b></h2>
           </router-link>
         </li>
       </ul>
@@ -44,22 +44,5 @@
   </div>
 </template>
 
-<script>
-
-export default {
-  name: 'Header.vue',
-  data() {
-    return {
-      hamburgerIsActive: false,
-      show_navbar: true,
-    };
-  },
-  methods: {
-    toggleHamburger() {
-      this.hamburgerIsActive = !this.hamburgerIsActive;
-    },
-  },
-};
-</script>
-
 <style src="./Header.scss" lang="scss" />
+  

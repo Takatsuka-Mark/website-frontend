@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700');
-@import '../../node_modules/bootstrap/scss/bootstrap';
+// @import '../../node_modules/bootstrap/scss/bootstrap';
 //@import '../../node_modules/bootstrap-vue/src/index';
 
 // Theme bb on https://coolors.co/u/mark_takatsuka
@@ -37,6 +37,7 @@ Headings
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-top: 0;
+  margin-bottom: 0.5rem;
   font-weight: 200;
   line-height: 1.2;
 }
@@ -70,6 +71,9 @@ a:hover{
   text-decoration: none;
 }
 
+b, .b{
+  font-weight: normal;
+}
 
 /*
 Container stuff
