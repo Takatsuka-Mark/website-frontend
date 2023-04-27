@@ -24,8 +24,7 @@ export default {
     },
   },
   created() {
-    this.last_y = window; // TODO determine why this is erroring
-    // eslint-disable-next-line no-return-assign
+    // this.last_y = window // TODO(mark) determine why this was used in original
     setTimeout(() => this.show_navbar2 = true, 2850);
   },
   mounted() {
