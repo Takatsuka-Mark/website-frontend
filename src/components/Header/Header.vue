@@ -35,4 +35,3 @@ import InitialsSVG from '../InitialsSVG/InitialsSVG.vue';
 </template>
 
 <style src="./Header.scss" lang="scss" />
-  
