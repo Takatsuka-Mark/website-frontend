@@ -1,18 +1,9 @@
-<template>
-  <router-view/>
-</template>
-
-<script>
-export default {
-  name: 'App',
-  created() {
-    const currentPath = this.$router.history.current.path;
-
-    if (currentPath === '/' || currentPath === '/app') {
-      this.$router.push('/Home');
-    }
-  },
-};
+<script setup lang="ts">
+import LayoutView from './views/LayoutView/LayoutView.vue'
 </script>
 
-<style src="./styles/theme.scss" lang="scss" />
+<template>
+  <LayoutView/>
+</template>
+
+<style src="./styles/theme.scss" lang="scss"/>

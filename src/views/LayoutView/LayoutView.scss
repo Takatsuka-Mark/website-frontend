@@ -1,0 +1,84 @@
+@import '../../styles/theme';
+
+.root {
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  flex-grow: 1;
+  // 1rem for footer height
+  padding: 5rem $content-padding ($content-padding + 1rem);
+
+  // hammers disallows text selection, allowing it for large screens
+  @media (min-width: breakpoint-min(sm)) {
+    user-select: auto !important;
+  }
+
+  opacity: 0;
+  animation: fadeIn $page_fade_in ease forwards $logo_trace_in + $logo_show_time + $logo_fade_out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  animation: lockOverflow $logo_trace_in + $logo_show_time + $logo_fade_out steps(1, end) forwards;
+}
+
+@keyframes lockOverflow {
+  from {
+    overflow-y: hidden;
+    height: 100%;
+  }
+  to {
+    overflow-y: auto;
+    height: auto;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: scaleY(0%)
+  }
+  to {
+    transform: scaleY(100%)
+  }
+}
+
+.loader {
+  z-index: 1000;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.hide-navbar-enter-active {
+  animation: slideIn 0.4s;
+}
+.hide-navbar-leave-active {
+  animation: slideIn 0.4s reverse;
+  //transition: max-height
+}
+
+
+.router-fade-enter-active,
+.router-fade-leave-active {
+  transition: opacity 0.4s, transform 0.4s;
+}
+.router-fade-enter-from,
+.router-fade-leave-to {
+  opacity: 0;
+  transform: translate(-30%)
+}
